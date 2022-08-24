@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(45, 45, 45);
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Staatliches', sans-serif;
+}
+
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+input[type="color" i] {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    padding: 0px;
+    appearance: auto;
+    /* margin-right: 10px; */
+}
+
+.allColors{
+    display: flex;
+}
+
+.allColors :nth-child(2n) {
+    margin: 0 10px;  
+}
+/* 
+#formPersonal{
+    background-color: rgba(0, 0, 0, 0.055);
+    width: 260px;
+    padding: 30px 30px 30px 30px;
+
+    top: 10%;
+    left: 5%;
+    pointer-events: all;
+}  */
+
+#formPersonal{
+
+    width: 260px;
+    /* padding: 0px 0px 170px 0px; */
+    pointer-events: all;
+    /* align-self: end; */
+    grid-row-start: 9;
+    margin: 0 0 0 52px;
+    /* position: absolute; */
+    /* top: 852vh; */
+    /* left: 10vw; */
+
+
+    /* TEST ANIMATION AND SPACES */
+    /* border: solid 1px red; */
+    display: grid;
+    height: 236vh;
+    align-items: start;
+    /* padding-top: 10vh; */
+    opacity: 0;
+}
+
+#formPersonal form{
+    width: 100%;
+    display: grid;
+    background-color: rgb(43 43 43 / 49%);
+    padding: 30px 30px 30px 30px;
+    justify-items: start;
+    border-radius: 8px;
+    border: 1px solid #63636366;
+    /* height: 534px; */
+}
+
+#formPersonal form div label{
+    margin: 10px 0 5px 0;
+    color: rgb(194 194 194);
+}
+
+#formPersonal form p{
+    margin: 10px 0 5px 0;
+    color: rgb(194 194 194);
+}
+
+.titleForm{
+    margin-bottom: 30px;
+    color: rgb(194 194 194);
+    font-size: 25px;
+}
+
+.formSectionOne{
+    width: 100%;
+    display: grid;
+    justify-items: start;
+    /* grid-row: 1; */
+    /* grid-column: 1; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.formSectionTwo{
+    display: grid;
+    margin: 18px 0 0 0;
+    /* grid-row: 1; */
+    /* grid-column: 1; */
+}
+
+.btnReturn{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(70, 70, 70);
+    padding: 0 7px;
+    border: none;
+    /* right: -35px;
+    top: 0; */
+    width: 30px;
+    height: 30px;
+    margin: -17px 117px 0px;
+    justify-self: end;
+    z-index: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 8vh;
+}
+.btnReturn img{
+    width: 90%;
+    height: 90%;
+}
+
+.btnSpin{
+    /* position: unset;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(70, 70, 70);
+    padding: 13px 4px 12px;
+    border: none;
+    left: 35px;
+    bottom: 32px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%; */
+
+
+    position: unset;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    padding: 13px 4px 12px;
+    border: none;
+    /* left: 35px; */
+    /* bottom: 32px; */
+    /* width: 45px; */
+    /* height: 45px; */
+    cursor: pointer;
+    /* border-radius: 50%; */
+    margin: 15px 0;
+    justify-self: flex-end;
+}
+
+.btnSpin img{
+    width: 90%;
+    height: 90%;
+}
+
+.hideFormText{
+    display: none;
+}
+.hideFormColor{
+    display: none;
+}
+input[type='text']{
+    letter-spacing: 1px;
+    width: 100%;
+    height: 35px;
+    padding: 0 0 0 10px;
+    margin: 0 0 10px 0;
+}
+
+input[type='email']{
+    letter-spacing: 1px;
+    width: 100%;
+    height: 35px;
+    padding: 0 0 0 10px;
+    margin: 0 0 10px 0;
+}
+
+input[type='password']{
+    letter-spacing: 1px;
+    width: 100%;
+    height: 35px;
+    padding: 0 0 0 10px;
+    margin: 0 0 10px 0;
+}
+
+input[type='date']{
+    /* width: 100%; */
+    height: 35px;
+    margin: 10px;
+    margin-left: 0;
+    margin: 0 0 11px 0;
+    padding: 0 0 0 10px;
+}
+
+input[type='number']{
+    height: 40px;
+    font-size: 24px;
+    padding: 0 0 0 27px;
+}
+
+input[type='submit']{
+    width: 122px;
+    height: 40px;
+    margin: 10px;
+    margin-left: 0;
+    justify-self: end;
+    text-transform: uppercase;
+    border: none;
+    margin: 17px 0 0px 0;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+input[type='submit']:hover{
+   background-color: #929292;
+   color: white;
+}
+
+#formPersonal form.loginForm{
+    height: 360px;
+}
+
+#formPersonal form.registerForm{
+    height: 440px
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.link{
+    display: block;
+    color: grey;
+    text-decoration: none;
+    margin: 19px 0 0;
+    transition: 0.5s;
+}
+
+.link:hover{
+    color: rgb(183, 183, 183);
+    text-decoration: dashed;
+}
+
+.link::before{
+    content: '<'
+}
+
+.registerForm{
+    pointer-events: all;
+    /* user-select: all; */
+}
+.loginForm{
+    pointer-events: all;
+}
+
+input[type='submit']{
+    pointer-events: all;
+    user-select: all;
+    cursor: pointer;
+}
+
+.alert{
+    text-align: center;
+    color: rgb(196, 196, 196);
+    font-weight: 100;
+    margin: 0 0 30px 0;
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    align-items: center;
+
+    /* forEVERYPLACE */
+    align-self: end;
+    /* position: fixed;
+    top: 30%;
+    left: 40%;
+    width: 200px; */
+}
+.red{
+    background-color: rgb(47, 7, 7);
+}
+
+.blue{
+    background-color: rgb(0, 42, 42);
+}
+
+.formWraper{
+    background: rgba(0, 0, 0, 0.678);
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: center;
+}
+
+.formWraper h2, h3{
+    color: grey;
+    font-weight: 200;
+}
+
+.formWraper label{
+    color: grey;
+    font-weight: 200;
+    margin: 8px 0;
+    display: block;
+}
+
+.titleClose{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: grey;
+}
+
+.already{
+    margin-top: 25px;
+}
+
+.already a h3{
+    text-decoration-line: underline;
+    text-decoration-color: #929292;
+}
+
+.btnBuy{
+    border: none;
+    padding: 10px;
+    flex: 1 1 0px;
+    transition: all 0.5s;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.saveOrBuy{
+    display: flex;
+   
+    width: 100%;
+    align-items: stretch;
+    align-content: flex-end;
+    justify-content: space-between;
+    margin: 20px 0 0;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btnBuy:hover{
+ background: gray;
+ color: white;
+}
+

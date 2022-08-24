@@ -1,0 +1,77 @@
+.infoen3d{
+    display: grid;
+    height: 8000px;
+    /* position: absolute; */
+}
+
+.noSelect{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    pointer-events: none;
+}
+
+.fullTitle{
+    margin: 181px 0 0 0px;
+    display: flex;
+}
+
+.fullInfo{
+    display: grid;
+    width: 36%;
+    justify-items: end;
+}
+
+.w3{
+    color: #575757;
+    text-align: end;
+}
+
+.title{
+    font-size: 110px;
+    font-variant: normal;
+    /* display: flex; */
+}
+.subTitle{
+    margin-top: -30px;
+    margin-right: 12px;
+    font-size: 30px;
+    text-align: end;
+}
+
+.htmlData{
+    z-index: 10;
+    max-width: 99vw;
+    padding: 0 10vw;
+}
+
+.txtP{
+    text-align: end;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.btext-b{
+    font-size: 40px;
+}
+
+.fullCanvas{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.btnDirect{
+    border-radius: 10px;
+    color: white;
+    background-color: #666666;
+    padding: 8px 10px;
+}

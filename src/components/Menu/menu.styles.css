@@ -1,0 +1,145 @@
+.saludo{
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.836);
+}
+.menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: flex-end;
+  z-index: 5000;
+}
+
+.menuWraper{
+  pointer-events: all;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5001;
+  display: grid;
+  justify-items: end;
+}
+
+
+.hamElement{
+  background-color: rgb(181, 179, 179);
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.hamMenu{
+  z-index: 5010;
+}
+.btnLogIn{
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.776);
+  font-size: 17px;
+}
+
+/* .menuHam{ */
+  /* background-color: #000000f5;
+  display: flex;
+  transition: all 0.5s;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh; */
+
+  /* testposition */
+  /* position: absolute;
+  left: 20vw;
+  top: 0px;
+} */
+
+
+.menuHam{
+  background-color: #000000f5;
+  display: flex;
+  margin-right: -10px;
+  transition: all 0.5s;
+  flex-direction: row;
+  justify-content: center;
+  /* width: 100vw;
+  height: 100vh; */
+  /* margin-top: -80px; */
+
+  /* testposition */
+  /* position: absolute; */
+  /* left: 20vw; */
+  /* top: 0px; */
+}
+
+/* .menuHam>button{
+  background-color: transparent;
+  border: none;;
+  font-size: 30px;
+  padding: 20px 0;
+  transition: 0.2s;
+  color: rgba(255, 255, 255, 0.769);
+} */
+
+.itemMenu{
+  background-color: transparent;
+  border: none;
+  /* margin: 0 11px; */
+  font-size: 18px;
+  /* padding: 20px 0; */
+  transition: 0.2s;
+  color: rgba(255, 255, 255, 0.769);
+  padding: 10px 10px;
+  text-decoration: none;
+  display: grid;
+  align-items: center;
+}
+
+.menuHam button:hover, .itemMenu:hover{
+ color: rgba(255, 255, 255, 0.676);
+
+ color: rgb(155, 154, 154);
+ background-color: rgba(255, 255, 255, 0.132);
+ border: none;
+ font-size: 25px;
+ /* margin: 27px 0; */
+ padding: 10px 20px;
+
+}
+
+
+.btnLogOut{
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  color: grey;
+  transition: all 0.2s;
+  padding: 10px 10px;
+  color: rgba(255, 255, 255, 0.769);
+  text-decoration: none;
+  display: grid;
+  align-items: center;
+}
+
+.btnLogOut:hover{
+  color: rgb(155, 154, 154);
+  background-color: rgba(90, 11, 11, 0.516);
+  border: none;
+  font-size: 25px;
+  /* margin: 10px 0; */
+  padding: 10px 20px;
+}
+
+.btnLogOut:active{
+  color: rgb(49, 49, 49);
+  background-color: rgba(255, 255, 255, 0.741);
+  border: none;
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 10px;
+}

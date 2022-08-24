@@ -1,0 +1,73 @@
+.infos{
+  background: #01030eed;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  pointer-events: all;
+}
+
+.infoWraper{
+  margin-top: 10%;
+  width: 50%;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.infoWraper h1{
+  color: rgba(255, 255, 255, 0.646);
+  font-size: 50px;
+}
+
+.infoWraper p{
+  /* text-transform: ; */
+  color: rgba(255, 255, 255, 0.646);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.infoWraper p a{
+  /* text-transform: ; */
+  color: rgba(255, 255, 255, 0.646);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pasosWraper{
+  margin-top: 20px;
+}
+
+.pasos{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px
+}
+
+.buyingcards{
+  width: 40%;
+  /* background: white; */
+  /* color: black; */
+  height: 150px;
+  border: 1px solid #ffffff1f;
+  padding: 10px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contactForm{
+ width: 80%;
+ align-self: center;
+}
+
+textarea[type='text']{
+  margin: 20px 0 0;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+}
