@@ -80,7 +80,7 @@ const RegisterForm = (props) => {
     //     behavior: 'smooth',
     //   })
   
-    const element = document.querySelector("#formPersonal")
+    const element = document.querySelector("#formName")
     element.scrollIntoView({behavior: 'smooth'});
   }
 

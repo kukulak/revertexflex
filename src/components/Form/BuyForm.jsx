@@ -67,7 +67,7 @@ const RegisterForm = (props) => {
   }
 
   const goDown = () => {
-    const element = document.querySelector("#formPersonal")
+    const element = document.querySelector("#formName")
     element.scrollIntoView({behavior: 'smooth'});
   }
 

@@ -4,7 +4,7 @@ import './Infos.css'
 
 const Revertexflex = () => {
   const goDown = () => {
-    const element = document.querySelector("#formPersonal")
+    const element = document.querySelector("#formName")
     element.scrollIntoView({behavior: 'smooth'});
   }
   return (
@@ -26,7 +26,7 @@ const Revertexflex = () => {
         Reflex in the oder hand is when the light bounces off a surface(not a common use but still).
       </p>
       <p>
-        
+
       </p>
 
     </section>
