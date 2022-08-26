@@ -30,19 +30,19 @@ const BuyingProcess = () => {
           <p>
             The 3d model is proccesed in a sofware to clean it up.
             </p>
-            <p>This step takes couple of hours,
+            <p>This step takes couple of hours.
               </p>
         </div>
         <div className="buyingcards">
             <p> We send it to our 3d print provider
               </p>
-              <p>This take almost a week,
+              <p>This take almost a week.
               </p>
         </div>
         <div className="buyingcards">
               <p>Then comes back to us and the art by hand starts, the 3d print is curated, sanded and painted,
               </p>
-              <p>This takes another week,
+              <p>This takes another week.
               </p>
         </div>
         <div className="buyingcards">

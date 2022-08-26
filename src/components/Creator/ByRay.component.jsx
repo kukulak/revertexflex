@@ -1,18 +1,18 @@
-import { createRoot } from 'react-dom/client'
+// import { createRoot } from 'react-dom/client'
 import * as THREE from 'three'
 import React, { useRef, useState, Suspense, useMemo, useEffect } from 'react'
-import { Canvas, dispose, useFrame, useThree } from '@react-three/fiber'
-import { STLExporter } from "three/examples/jsm/exporters/STLExporter"
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+// import { STLExporter } from "three/examples/jsm/exporters/STLExporter"
 import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js';
-import { useSpring, animated, SpringValue } from '@react-spring/three'
-import { Image, useCursor, ScrollControls, useScroll, Text, Environment, Lightformer, Float, useGLTF, softShadows, BakeShadows, ContactShadows, SpotLight, useDepthBuffer } from '@react-three/drei'
-import { LayerMaterial, Base, Depth } from 'lamina'
-import { gsap } from "gsap";
-import { BufferGeometryUtils } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
+import { useSpring } from '@react-spring/three'
+import { Image, useCursor,  useScroll, Text, useGLTF, softShadows, SpotLight, useDepthBuffer } from '@react-three/drei'
+// import { LayerMaterial, Base, Depth } from 'lamina'
+// import { gsap } from "gsap";
+// import { BufferGeometryUtils } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
 
-import { coordenadas } from './creator.app.jsx';
-import { PolyhedronGeometry } from 'three'
+// import { coordenadas } from './creator.app.jsx';
+// import { PolyhedronGeometry } from 'three'
 
 import { useControls } from 'leva'
 
@@ -587,7 +587,7 @@ const Ray = (props)=>{
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
 
-    console.log(nodes)
+    // console.log(nodes)
 
     useFrame((state, delta) => {
       mesh.current.rotation.y += 0.002
