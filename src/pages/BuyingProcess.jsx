@@ -16,10 +16,10 @@ const BuyingProcess = () => {
         <div className='titleClose'> <h1>Buying</h1> <Link onClick={ goDown } to='/'> <h3>X close</h3> </Link></div>
 
         <p>
-          To buy your created sculpture first you have to sign in, then click the buy button this will take you to fill form, then you'll be redirected to the process payment.
+          To buy your created sculpture first you have to sign in, then click the buy button this will take you to fill a form, then you'll be redirected to the payment process.
         </p>
-
-        <p>The deliver will take some weeks keep reading to know why.  
+<br />
+        <p>The delivery will take some weeks keep reading to know why.  
         </p>
         <div className='pasosWraper'>
           <p>

@@ -309,14 +309,14 @@ const PersonalForm = (props) => {
                         value={birthdate}
                         onChange={ e => setBirthdate(e.target.value) }/>
 
-                    <label htmlFor='formBirthDay'>
+                    <label htmlFor='formNumber'>
                         Number (0-9): 
                     </label>
                     <input
                         ref={magicNumbreRef}
                         type="number"
                         name="birthDay"
-                        id="formBirthDay"
+                        id="formNumber"
                         min="0"
                         max="9"
                         value={magicNumber}

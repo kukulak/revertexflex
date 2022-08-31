@@ -14,8 +14,9 @@
   margin-top: 10%;
   width: 50%;
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
+  overflow: scroll;
+  padding: 10px;
 }
 
 .infoWraper h1{
@@ -71,3 +72,44 @@ textarea[type='text']{
   height: 300px;
   padding: 10px;
 }
+
+.noMobile{
+  background-color: black;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.noMobile .aviso{
+  width: 60%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: -50px 0;
+  top: -43px;
+  position: relative;
+}
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  /* and (max-device-width: 1024px)  */
+  /* and (-webkit-min-device-pixel-ratio: 1)  */
+  {
+    .noMobile{
+      /* display: none; */
+    }
+}
+
+@media only screen 
+  and (min-width: 1024px) 
+  /* and (max-device-width: 1024px)  */
+  /* and (-webkit-min-device-pixel-ratio: 1)  */
+  {
+    .noMobile{
+      display: none;
+    }
+}
+
+/* @media only screen and (max-device-width : 480px){} */

@@ -10,6 +10,7 @@ const Menu = () => {
   const { cerrarSesionProyectos } = useProyectos()
   const [state, setState] = useState(true)
   const menuRef = useRef()
+
   const handleLogout = () => {
     cerrarSesionAuth()
     cerrarSesionProyectos()
@@ -33,18 +34,22 @@ const Menu = () => {
         behavior: 'smooth',
       })
   }
+  
+
 
 <div className='already'> <h3>Already registered? </h3> <Link to='/login'> <h3>Log In here</h3> </Link></div>
 
   return (
     <aside >
     <div className='menuWraper'>
+
     {auth.nombre ? <p className="saludo"> Hey {auth.nombre} </p> : <Link className='btnLogIn' onClick={goTop} to='/login'> Log In / Register </Link> }
       {/* <Hamburger handleClick={handleClick} /> */}
+      <Hamburger />
       <div className="menuHam">
         <Link className='itemMenu' to={'/about'} > About </Link>
         <Link className='itemMenu' to={'/buy'} > Buying process </Link>
-        <Link className='itemMenu' to={'/revertexflex'} > What is REVERTEXFLEX </Link>
+        {/* <Link className='itemMenu' to={'/revertexflex'} > What is REVERTEXFLEX </Link> */}
         <Link className='itemMenu' to={'/contact'} > Contact </Link>
         {/* <button href={'/'} > CuartelDinamita </button> */}
         {auth.nombre && <Link to='/' onClick={handleLogout} className='btnLogOut'>Log Out</Link>}

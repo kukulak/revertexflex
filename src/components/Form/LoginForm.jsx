@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Alert from './Alert'
 import clienteAxios from '../../config/clienteAxios'
@@ -8,6 +8,15 @@ const LoginForm = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [alerta, setAlerta] = useState({})
+  
+  
+  const wraper = useRef()
+  useEffect(() => {
+    setTimeout(() =>{
+      wraper.current.style.top = 0
+    }, 200)
+  }, [])
+
 
   const { setAuth } = useAuth()
   let navigate = useNavigate();
@@ -27,20 +36,23 @@ const LoginForm = () => {
       })
       return
     }
-    try{
 
+    try{
       const { data } = await clienteAxios.post('/usuarios/login', {email, password})
       setAlerta({})
       localStorage.setItem('token', data.token)
       setAuth(data)
       goDown()
+      navigate("/", { replace: true });
+
     }catch(error){
       setAlerta({
         msg: error.response.data.msg,
         error: true
       })
     }
-    navigate("/", { replace: true });
+    // navigate("/", { replace: true });
+  
   }
   
  
@@ -49,7 +61,7 @@ const LoginForm = () => {
   return (
     <>
    
-      <section className='formWraper'>
+      <section ref={wraper} className='formWraper'>
         <form className='loginForm' onSubmit={submitHandler}>
         <div className='titleClose'> <h2>Log In</h2> <Link onClick={ goDown } to='/'> <h3>X close</h3> </Link></div>
         {msg && <Alert alert={alerta}/>}

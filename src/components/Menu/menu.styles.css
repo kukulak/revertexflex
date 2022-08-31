@@ -26,17 +26,72 @@
 }
 
 
+
+
+
+
+
+
+/* @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+  {
+    .menuWraper{
+      display: none;
+    }
+
+} */
+
 .hamElement{
   background-color: rgb(181, 179, 179);
-  width: 40px;
-  height: 5px;
+  width: 30px;
+  height: 2px;
   border-radius: 5px;
   margin: 5px 0;
 }
 
 .hamMenu{
   z-index: 5010;
+  display: none;
+  cursor: pointer;
 }
+
+
+@media only screen 
+  /* and (min-device-width: 768px)  */
+  /* and (max-device-width: 1124px)  */
+  and (max-width: 1224px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+  {
+    .hamMenu{
+      display: block;
+    }
+}
+
+.menuHide{
+  background-color: black;
+  display: grid;
+  /* display: none; */
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  right: -100vw;
+  transition: 1s;
+}
+
+@media only screen 
+  /* and (min-device-width: 768px)  */
+  /* and (max-device-width: 1124px)  */
+  and (min-width: 1224px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+  {
+    .menuHide{
+      display: none !important;
+    }
+}
+
 .btnLogIn{
   background-color: transparent;
   border: none;
@@ -76,7 +131,16 @@
   /* left: 20vw; */
   /* top: 0px; */
 }
-
+@media only screen 
+  /* and (min-device-width: 768px)  */
+  /* and (max-device-width: 1124px)  */
+  and (max-width: 1224px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+  {
+    .menuHam{
+      display: none;
+    }
+}
 /* .menuHam>button{
   background-color: transparent;
   border: none;;
@@ -85,6 +149,13 @@
   transition: 0.2s;
   color: rgba(255, 255, 255, 0.769);
 } */
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
 
 .itemMenu{
   background-color: transparent;
@@ -99,6 +170,12 @@
   display: grid;
   align-items: center;
 }
+
+/* .itemMenu:hover{
+  animation-name: example;
+  animation-duration: 4s;
+
+} */
 
 .menuHam button:hover, .itemMenu:hover{
  color: rgba(255, 255, 255, 0.676);

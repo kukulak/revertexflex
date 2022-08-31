@@ -590,7 +590,7 @@ const Ray = (props)=>{
     // console.log(nodes)
 
     useFrame((state, delta) => {
-      mesh.current.rotation.y += 0.002
+      mesh.current.rotation.y += props.time
      
     })
   
@@ -867,12 +867,12 @@ const CameraMovement = (props, { v = new THREE.Vector3(), c = new THREE.Color() 
 
        {/* DERECHA */}
       
-       <Box num={1} position={cubePositions[1]} />
+       {/* <Box num={1} position={cubePositions[1]} /> */}
        <Box num={2} position={cubePositions[2]} />
    
    {/* IZQUIERDA */}
        <Box num={4} position={cubePositions[4]} />
-       <Box num={5} position={cubePositions[5]} />
+       {/* <Box num={5} position={cubePositions[5]} /> */}
     </group>
   )
 
@@ -1080,9 +1080,12 @@ const TwoCubes = (rayoSculpture) => {
         {/* <primitive object={dirLight} position={[30, 0, 30]} /> */}
         {/* <primitive object={dirLight.target} position={[0, 0, 0]}  /> */}
         {/* <ManageGl/> */}
-        <ambientLight intensity={0.4} />
         
-        <directionalLight
+        <ambientLight intensity={0.4} />
+
+        {/* luz desactivarda----- */}
+        
+        {/* <directionalLight
           {...esProps}
           // castShadow
           // position={[5, 3 -110]}
@@ -1095,7 +1098,9 @@ const TwoCubes = (rayoSculpture) => {
           shadow-camera-right={10}
           shadow-camera-top={10}
           shadow-camera-bottom={-10}
-        />
+        /> */}
+        
+        {/* luz desactivarda----- */}
 
         <directionalLight
           {...esProps}
@@ -1169,7 +1174,7 @@ const TwoCubes = (rayoSculpture) => {
       <pointLight position={[40, 50, -40]} color={"white"} intensity={0.3} />
       {/* <pointLight position={[0, -10, 0]} intensity={1.5} /> */}
 
-      <hemisphereLight skyColor= {0xd8d8d8} groundColor={0x080820} intensity={0.5} />
+      {/* <hemisphereLight skyColor= {0xd8d8d8} groundColor={0x080820} intensity={0.5} /> */}
       
 
       <Suspense>
@@ -1180,22 +1185,22 @@ const TwoCubes = (rayoSculpture) => {
                 position={[-8.2, -4.0, -30]}
 
               >
-                <EsculturasL color={0x533809} name={'eintein_2001'} fileName={'/einsteinClean1.glb'}/>
-                <EsculturasL color={0x5D440E} name={'eintein_3001'} fileName={'/einsteinClean1.glb'} />
-                <EsculturasL color={0x2E1F0A} name={'eintein_4001'} fileName={'/einsteinClean1.glb'} />
-                <EsculturasL color={0x2E1F0A} name={'eintein_6001'} fileName={'/einsteinClean1.glb'} />
+                <EsculturasL  time={0.002} color={0x533809} name={'eintein_2001'} fileName={'/einsteinClean1.glb'}/>
+                <EsculturasL  time={0.002} color={0x5D440E} name={'eintein_3001'} fileName={'/einsteinClean1.glb'} />
+                <EsculturasL  time={0.002} color={0x2E1F0A} name={'eintein_4001'} fileName={'/einsteinClean1.glb'} />
+                <EsculturasL  time={0.002} color={0x2E1F0A} name={'eintein_6001'} fileName={'/einsteinClean1.glb'} />
               </group>
 
               <group
-                rotation={[0.0, 0.0, 0]}
-                position={[-8.0, -2.2, -45]}
-                scale={10.6}
+                rotation={[0.08, 0.609, 0.209]}
+                position={[-105.10, 35.2, -45]}
+                scale={950.6}
               >
-                <EsculturasL color={0x533809} name={'Cube'} fileName={'/escultura-cubo-f.glb'}/>
-                <EsculturasL color={0x5D440E} name={'Cube001'} fileName={'/escultura-cubo-f.glb'} />
-                <EsculturasL color={0x2E1F0A} name={'Cube002'} fileName={'/escultura-cubo-f.glb'} />
-                <EsculturasL color={0x2E1F0A} name={'Cube003'} fileName={'/escultura-cubo-f.glb'} />
-                <EsculturasL color={0x2E1F0A} name={'Cube004'} fileName={'/escultura-cubo-f.glb'} />
+                <EsculturasL time={0.00002} color={0x533809} name={'Cube'} fileName={'/escultura-cubo-f.glb'}/>
+                <EsculturasL time={0.00002} color={0x5D440E} name={'Cube001'} fileName={'/escultura-cubo-f.glb'} />
+                <EsculturasL time={0.00002} color={0x2E1F0A} name={'Cube002'} fileName={'/escultura-cubo-f.glb'} />
+                <EsculturasL time={0.00002} color={0x2E1F0A} name={'Cube003'} fileName={'/escultura-cubo-f.glb'} />
+                <EsculturasL time={0.00002} color={0x2E1F0A} name={'Cube004'} fileName={'/escultura-cubo-f.glb'} />
               </group>
 
               <group
@@ -1203,24 +1208,24 @@ const TwoCubes = (rayoSculpture) => {
                 position={[8, -4.0, -55]}
                 scale={0.6}
               >
-                <EsculturasL color={0xAC5C02} name={'Thomyorke001'} fileName={'/thomClean1.glb'}/>
-                <EsculturasL color={0x2B1E03} name={'Thomyorke002'} fileName={'/thomClean1.glb'} />
-                <EsculturasL color={0x2B1E03} name={'Thomyorke003'} fileName={'/thomClean1.glb'} />
-                <EsculturasL color={0x786845} name={'Thomyorke004'} fileName={'/thomClean1.glb'} />
-                <EsculturasL color={0xAC5C02} name={'Thomyorke005'} fileName={'/thomClean1.glb'} />
+                <EsculturasL time={0.002} color={0xAC5C02} name={'Thomyorke001'} fileName={'/thomClean1.glb'}/>
+                <EsculturasL time={0.002} color={0x2B1E03} name={'Thomyorke002'} fileName={'/thomClean1.glb'} />
+                <EsculturasL time={0.002} color={0x2B1E03} name={'Thomyorke003'} fileName={'/thomClean1.glb'} />
+                <EsculturasL time={0.002} color={0x786845} name={'Thomyorke004'} fileName={'/thomClean1.glb'} />
+                <EsculturasL time={0.002} color={0xAC5C02} name={'Thomyorke005'} fileName={'/thomClean1.glb'} />
               </group>
 
 
               <group
                 rotation={[0.0, 0.0, 0.0]}
-                position={[8, -2.0, -45]}
-                scale={0.4}
+                position={[28, -2.0, -25]}
+                scale={10.4}
               >
-                <EsculturasL color={0x786845} name={'planeC00'} fileName={'/escultura-cubo001.glb'}/>
-                <EsculturasL color={0x2B1E03} name={'planeC001'} fileName={'/escultura-cubo001.glb'} />
-                <EsculturasL color={0x2B1E03} name={'planeC002'} fileName={'/escultura-cubo001.glb'} />
-                <EsculturasL color={0x786845} name={'planeC003'} fileName={'/escultura-cubo001.glb'} />
-                <EsculturasL color={0xAC5C02} name={'Cube002'} fileName={'/escultura-cubo001.glb'} />
+                <EsculturasL time={0.00002} color={0x786845} name={'planeC00'} fileName={'/escultura-cubo001.glb'}/>
+                <EsculturasL time={0.00002} color={0x2B1E03} name={'planeC001'} fileName={'/escultura-cubo001.glb'} />
+                <EsculturasL time={0.00002} color={0x2B1E03} name={'planeC002'} fileName={'/escultura-cubo001.glb'} />
+                <EsculturasL time={0.00002} color={0x786845} name={'planeC003'} fileName={'/escultura-cubo001.glb'} />
+                <EsculturasL time={0.00002} color={0xAC5C02} name={'Cube002'} fileName={'/escultura-cubo001.glb'} />
               </group>
 
                       

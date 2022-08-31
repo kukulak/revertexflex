@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import clienteAxios from '../../config/clienteAxios';
 import Alert from './Alert';
 import {Link} from 'react-router-dom'
@@ -11,6 +11,14 @@ const RegisterForm = (props) => {
   const [password, setPassword] = useState('')
   const [repetirPassword, setRepetirPassword] = useState('')
   const [alert, setAlert] = useState({})
+
+
+  const wraper = useRef()
+  useEffect(() => {
+    setTimeout(() =>{
+      wraper.current.style.top = 0
+    }, 200)
+  }, [])
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -75,7 +83,7 @@ const RegisterForm = (props) => {
     <>
       <div className="user__name">
       </div>
-      <section className='formWraper'>
+      <section  ref={wraper} className='formWraper'>
       <form className='registerForm' onSubmit={submitHandler}>
         <div className='titleClose'> <h2>Register</h2> <Link onClick={ goDown } to='/'> <h3>X close</h3> </Link></div>
         { msg && <Alert alert={alert}/> }

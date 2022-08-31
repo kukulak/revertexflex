@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import Alert from '../Form/Alert'
 import clienteAxios from '../../config/clienteAxios'
 import '../Form/PersonalForm.styles.css'
@@ -7,6 +7,15 @@ import {Link} from 'react-router-dom'
 const OlvidePassword = () => {
   const [email, setEmail] = useState('')
   const [alerta, setAlerta] = useState({})
+
+  const wraper = useRef()
+  useEffect(() => {
+    setTimeout(() =>{
+      wraper.current.style.top = 0
+    }, 200)
+  }, [])
+
+
   const submitHandler = async (e) => {
     e.preventDefault()
     if(email === ''){
@@ -39,7 +48,7 @@ const OlvidePassword = () => {
 
   const { msg } = alerta
   return (
-    <section className='formWraper'>
+    <section ref={wraper} className='formWraper'>
       <form className='loginForm' onSubmit={submitHandler}>
       <div className='titleClose'> <h2>Retrive Password</h2> <Link onClick={ goDown } to='/'> <h3>X close</h3> </Link></div>
       

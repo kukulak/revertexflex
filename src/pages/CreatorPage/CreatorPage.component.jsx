@@ -6,6 +6,7 @@ import LoadSculpts from '../../components/Creator/LoadSculpts'
 import { Outlet } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth'
 import Alert from '../../components/Form/Alert'
+import NoMobile from '../NoMobile'
 
 const CreatorPage = () => {
     const { auth, cargando } = useAuth()
@@ -19,9 +20,9 @@ const CreatorPage = () => {
              {/* <Alert alert={alerta}/> */}
              {/* {msg && <Alert alert={alerta}/>} */}
 
-
+            <NoMobile />
             <Menu />
-            <PersonalForm/>
+            <PersonalForm />
             {/* {auth._id ? (<div>
                 <LoadSculpts />
 

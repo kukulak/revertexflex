@@ -222,6 +222,7 @@ input[type='number']{
     height: 40px;
     font-size: 24px;
     padding: 0 0 0 27px;
+    width: 69px;
 }
 
 input[type='submit']{
@@ -313,7 +314,7 @@ input[type='submit']{
 }
 
 .formWraper{
-    background: rgba(0, 0, 0, 0.678);
+    background: rgba(0, 0, 0, 0.76);
     height: 100vh;
     display: grid;
     align-items: center;
@@ -321,6 +322,10 @@ input[type='submit']{
     justify-content: center;
     grid-row-start: 1;
     grid-row-end: 2;
+    position: fixed;
+    width: 100vw;
+    top: -100vh;
+    transition: 0.5s;
 }
 
 .formWraper h2, h3{

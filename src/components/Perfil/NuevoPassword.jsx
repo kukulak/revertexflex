@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Alert from '../Form/Alert'
@@ -11,6 +11,13 @@ const NuevoPassword = () => {
   const params = useParams()
   const [passwordModificado, setPasswordModificado] = useState(false)
   const { token } = params
+
+  const wraper = useRef()
+  useEffect(() => {
+    setTimeout(() =>{
+      wraper.current.style.top = 0
+    }, 200)
+  }, [])
 
   useEffect(() => {
     const comprobarToken = async () => {

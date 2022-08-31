@@ -10,30 +10,14 @@ const Contact = (props) => {
 
   const [nombre, setNombre]=useState('');
   const [email, setEmail]=useState('');
-  const [password, setPassword] = useState('')
-  const [repetirPassword, setRepetirPassword] = useState('')
   const [alert, setAlert] = useState({})
   const [message, setMessage] = useState('')
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    if([nombre, email, password, repetirPassword].includes('')){
+    if([nombre, email, message].includes('')){
       setAlert({
-        msg: 'Fill all the fields to register',
-        error: true
-      })
-      return
-    }
-    if(password !== repetirPassword){
-      setAlert({
-        msg: 'Bouth password must be equal',
-        error: true
-      })
-      return
-    }
-    if(password.length < 6){
-      setAlert({
-        msg: 'Password length must be at least 6 characters',
+        msg: 'Fill all the fields to send message',
         error: true
       })
       return
@@ -42,15 +26,14 @@ const Contact = (props) => {
     //Crear el usuario en la API
     
     try{
-      const { data } = await clienteAxios.post(`/usuarios`, {nombre, email, password})
+      const { data } = await clienteAxios.post(`/usuarios/contact`, {nombre, email, message})
       setAlert({
         msg: data.msg,
         error: false
       })
       setNombre('')
       setEmail('')
-      setPassword('')
-      setRepetirPassword('')
+      setMessage('')
     }catch(error){
       setAlert({
         msg: error.response.data.msg,
@@ -97,9 +80,6 @@ const Contact = (props) => {
         <textarea value={message} name="message" id="message" className="form-control" type="text" placeholder="Thanks for writing" autoComplete="off" onChange={e => setMessage(e.target.value)}/>
         
         <input type="submit" className="py-3 mt-4 btn btn-lg btn-success btn-block" value="Send" />
-
-      
-
       </form>
       </section>
     </>
